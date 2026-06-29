@@ -12,5 +12,5 @@
       }
     }, [params])
 
-    return sessionStorage.getItem('gclid') ?? ''
+    return typeof window !== 'undefined' ? sessionStorage.getItem('gclid') ?? '' : ''
   }

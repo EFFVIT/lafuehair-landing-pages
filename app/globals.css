@@ -8,8 +8,13 @@ button { font-family: inherit; }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 58fr 42fr;
   min-height: 680px;
+}
+.financing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 480px;
 }
 .steps-grid {
   display: grid;
@@ -46,6 +51,7 @@ button { font-family: inherit; }
 
 @media (max-width: 768px) {
   .hero-grid { grid-template-columns: 1fr; min-height: auto; }
+  .financing-grid { grid-template-columns: 1fr; }
   .steps-grid { grid-template-columns: 1fr; }
   .features-grid { grid-template-columns: 1fr 1fr; }
   .two-col { grid-template-columns: 1fr; }
