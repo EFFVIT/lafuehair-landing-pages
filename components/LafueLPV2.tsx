@@ -1,5 +1,5 @@
 'use client'
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import GhlForm from './GhlForm'
 import GclidCapture from './GclidCapture'
 
@@ -24,6 +24,71 @@ function StarRow({ color = '#f5c518', size = 18 }: { color?: string; size?: numb
         <span key={i} style={{ fontSize: size, color, lineHeight: 1 }}>&#9733;</span>
       ))}
     </div>
+  )
+}
+
+// ── FAQ ACCORDION ──────────────────────────────────────────────────────────
+const FAQ_ITEMS = [
+  {
+    q: 'What topics are commonly discussed when learning about hair loss?',
+    a: 'Educational discussions often include general information about hair growth cycles, common causes of hair thinning, and factors that may influence hair loss. These conversations are intended to help individuals better understand the topic and ask informed questions.',
+  },
+  {
+    q: 'How long does it take to review educational information about hair loss?',
+    a: 'Reviewing educational materials can vary depending on the individual and the topics being explored. Many people take time to read through information at their own pace and revisit sections as needed.',
+  },
+  {
+    q: 'Will the information be tailored to my questions?',
+    a: 'Educational information is designed to address common questions and concerns related to hair loss. While the content is informational in nature, individuals are encouraged to focus on the topics most relevant to their interests and understanding.',
+  },
+]
+
+function FaqSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
+  return (
+    <section style={{ background: WHITE, padding: '80px 48px', borderTop: '1px solid #eee' }}>
+      <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+        <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: 40, letterSpacing: '-0.025em', color: '#1a1a1a', marginBottom: 36 }}>
+          Answers Before You Decide
+        </h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+          {FAQ_ITEMS.map((item, i) => {
+            const isOpen = openIndex === i
+            return (
+              <div key={i} style={{ borderRadius: 50, overflow: 'hidden' }}>
+                <button
+                  onClick={() => setOpenIndex(isOpen ? null : i)}
+                  style={{
+                    width: '100%',
+                    background: STEEL,
+                    border: 'none',
+                    padding: '18px 28px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    gap: 24,
+                    cursor: 'pointer',
+                    textAlign: 'left' as const,
+                    borderRadius: isOpen ? '50px 50px 0 0' : 50,
+                  }}
+                  aria-expanded={isOpen}
+                >
+                  <span style={{ fontSize: 17, fontWeight: 600, color: '#1a1a1a', lineHeight: 1.35 }}>{item.q}</span>
+                  <span style={{ fontSize: 24, fontWeight: 300, color: '#1a1a1a', flexShrink: 0, lineHeight: 1 }}>
+                    {isOpen ? '−' : '+'}
+                  </span>
+                </button>
+                {isOpen && (
+                  <div style={{ background: '#f0f4f8', padding: '20px 28px 24px', borderRadius: '0 0 50px 50px' }}>
+                    <p style={{ fontSize: 15, lineHeight: 1.7, color: '#444', margin: 0 }}>{item.a}</p>
+                  </div>
+                )}
+              </div>
+            )
+          })}
+        </div>
+      </div>
+    </section>
   )
 }
 
@@ -663,31 +728,7 @@ export default function LafueLPV2({
       </section>
 
       {/* ── FAQ ──────────────────────────────────────────────────────────── */}
-      <section style={{ background: WHITE, padding: '80px 48px', borderTop: '1px solid #eee' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto' }}>
-          <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: 36 }}>
-            <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: 40, letterSpacing: '-0.025em', color: '#1a1a1a' }}>
-              Answers Before You Decide
-            </h2>
-            <span style={{ fontSize: 14, color: '#777', textDecoration: 'underline', textUnderlineOffset: '2px', cursor: 'pointer', paddingTop: 8, flexShrink: 0 }}>
-              Expand All
-            </span>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-            {[
-              'What topics are commonly discussed when learning about hair loss?',
-              'How long does it take to review educational information about hair loss?',
-              'Will the information be tailored to my questions?',
-              'How do I get started with a hair loss educational review?',
-            ].map((q, i) => (
-              <div key={i} style={{ background: STEEL, borderRadius: 50, padding: '18px 28px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 24, cursor: 'pointer' }}>
-                <span style={{ fontSize: 17, fontWeight: 600, color: '#1a1a1a', lineHeight: 1.35 }}>{q}</span>
-                <span style={{ fontSize: 24, fontWeight: 300, color: '#1a1a1a', flexShrink: 0, lineHeight: 1 }}>+</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FaqSection />
 
       {/* ── FOOTER FORM ──────────────────────────────────────────────────── */}
       <section style={{ background: '#2b2b2c', display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: 560 }}>
