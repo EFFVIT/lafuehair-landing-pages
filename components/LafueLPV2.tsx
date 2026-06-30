@@ -185,12 +185,12 @@ export default function LafueLPV2({
                 background: '#f5f5f5',
                 borderRadius: 8,
               }}>
-                <img src="/stars-rating.png" alt="5-star rating" style={{ height: 24, width: 'auto' }} />
-                <div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+                  <StarRow color="#f5c518" size={16} />
                   <div style={{ fontFamily: "'Open Sans', sans-serif", fontWeight: 500, fontSize: 14, color: '#000', lineHeight: 1.2 }}>
                     Patient-Centered Care
                   </div>
-                  <div style={{ fontSize: 11, color: '#555', lineHeight: 1.4, marginTop: 2 }}>
+                  <div style={{ fontSize: 11, color: '#555', lineHeight: 1.4 }}>
                     Patients appreciate our personalized, doctor-led approach.
                   </div>
                 </div>
