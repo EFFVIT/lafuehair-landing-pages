@@ -13,7 +13,7 @@ const NAVY        = '#2a548b'
 const MIST        = '#a1b4ce'
 const WHITE       = '#ffffff'
 
-const DR_PHOTO = 'https://lafuehairnyc.com/wp-content/uploads/2026/01/lafue-nyc-dr-anton-v4-831x1024-2-1.png'
+const DR_PHOTO = '/dr-anton.png'
 
 // ── SUB-COMPONENTS ─────────────────────────────────────────────────────────
 
@@ -402,7 +402,7 @@ export default function LafueLPV2({
       </section>
 
       {/* ── DOCTOR BIO ───────────────────────────────────────────────────── */}
-      <section style={{ background: DARK, padding: '80px 48px' }}>
+      <section style={{ background: WHITE, padding: '80px 48px' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.15fr', gap: 64, alignItems: 'flex-start', maxWidth: 1100, margin: '0 auto' }}>
           <div style={{ overflow: 'hidden', borderRadius: 8 }}>
             <img src={DR_PHOTO} alt="Dr. Anton" style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }} />
@@ -412,25 +412,25 @@ export default function LafueLPV2({
               fontFamily: "'Montserrat', sans-serif",
               fontWeight: 800,
               fontSize: 38,
-              color: WHITE,
+              color: '#1a1a1a',
               letterSpacing: '-0.02em',
               lineHeight: 1.15,
             }}>
               Guided by Medical Expertise
             </h2>
-            <p style={{ fontSize: 16, color: 'rgba(255,255,255,.55)', lineHeight: 1.5 }}>
+            <p style={{ fontSize: 16, color: '#888', lineHeight: 1.5 }}>
               Feedback collected from educational discussions and shared information.
             </p>
-            <p style={{ fontSize: 15.5, lineHeight: 1.78, color: 'rgba(255,255,255,.78)' }}>
+            <p style={{ fontSize: 15.5, lineHeight: 1.78, color: '#444' }}>
               Dr. Anton is a licensed physician with a clinical focus on the evaluation and management of hair loss conditions, including alopecia. His practice emphasizes patient education, medical assessment, and ongoing care for individuals experiencing hair loss.
             </p>
-            <p style={{ fontSize: 15.5, lineHeight: 1.78, color: 'rgba(255,255,255,.78)' }}>
+            <p style={{ fontSize: 15.5, lineHeight: 1.78, color: '#444' }}>
               Dr. Anton earned a Bachelor of Science in Chemistry, with a minor in Biology, from Truman State University and received his Doctor of Osteopathic Medicine from Kirksville College of Osteopathic Medicine. He completed advanced postgraduate medical training in general surgery and has extensive experience overseeing patient care in clinical settings.
             </p>
-            <p style={{ fontSize: 15.5, lineHeight: 1.78, color: 'rgba(255,255,255,.78)' }}>
-              Dr. Anton is board certified and maintains active medical licensure. He currently provides hair loss&#8209;related medical care at clinical locations on Long Island and in Manhattan.
+            <p style={{ fontSize: 15.5, lineHeight: 1.78, color: '#444' }}>
+              Dr. Anton is board certified and maintains active medical licensure. He currently provides hair loss-related medical care at clinical locations on Long Island and in Manhattan.
             </p>
-            <p style={{ fontSize: 15.5, lineHeight: 1.78, color: 'rgba(255,255,255,.78)' }}>
+            <p style={{ fontSize: 15.5, lineHeight: 1.78, color: '#444' }}>
               His work follows recognized medical standards, applicable regulations, and ethical guidelines related to hair loss evaluation and non-surgical management. He is a member of national professional organizations, including the American Osteopathic Association and the American Medical Association.
             </p>
             <a href="#" style={{
