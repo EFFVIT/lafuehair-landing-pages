@@ -46,9 +46,9 @@ const FAQ_ITEMS = [
 function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
   return (
-    <section style={{ background: WHITE, padding: '80px 48px', borderTop: '1px solid #eee' }}>
+    <section className="lp-pad" style={{ background: WHITE, padding: '80px 48px', borderTop: '1px solid #eee' }}>
       <div style={{ maxWidth: 1100, margin: '0 auto' }}>
-        <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: 40, letterSpacing: '-0.025em', color: '#1a1a1a', marginBottom: 36 }}>
+        <h2 className="lp-h2-xl" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: 40, letterSpacing: '-0.025em', color: '#1a1a1a', marginBottom: 36 }}>
           Answers Before You Decide
         </h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
@@ -107,7 +107,7 @@ export default function LafueLPV2({
       <Suspense fallback={null}><GclidCapture /></Suspense>
 
       {/* ── NAV ──────────────────────────────────────────────────────────── */}
-      <nav style={{
+      <nav className="lp-nav" style={{
         background: DARK_NAV,
         height: 164,
         display: 'flex',
@@ -121,11 +121,13 @@ export default function LafueLPV2({
         <img
           src="/logo-lafue.png"
           alt="L.A. FUE Hair New York"
+          className="lp-nav-logo"
           style={{ height: 84, width: 'auto', display: 'block' }}
         />
-        <div style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
+        <div className="lp-nav-btns" style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
           <a
             href="#"
+            className="lp-nav-btn"
             style={{
               background: STEEL,
               color: '#000',
@@ -144,6 +146,7 @@ export default function LafueLPV2({
           </a>
           <a
             href="tel:+15166135827"
+            className="lp-nav-btn"
             style={{
               background: WHITE,
               color: '#000',
@@ -164,9 +167,9 @@ export default function LafueLPV2({
       </nav>
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <section style={{ position: 'relative', background: STEEL, minHeight: 680, overflow: 'hidden', display: 'flex' }}>
+      <section className="lp-hero" style={{ position: 'relative', background: STEEL, minHeight: 680, overflow: 'hidden', display: 'flex' }}>
         {/* Background photo — left 61% */}
-        <div style={{ position: 'absolute', left: 0, top: 0, width: '61%', height: '100%' }}>
+        <div className="lp-hero-bg" style={{ position: 'absolute', left: 0, top: 0, width: '61%', height: '100%' }}>
           <img
             src="/hero-bg.jpg"
             alt=""
@@ -181,10 +184,10 @@ export default function LafueLPV2({
         </div>
 
         {/* Content row */}
-        <div style={{ position: 'relative', zIndex: 2, display: 'flex', width: '100%', alignItems: 'stretch' }}>
+        <div className="lp-hero-content" style={{ position: 'relative', zIndex: 2, display: 'flex', width: '100%', alignItems: 'stretch' }}>
           {/* Left col — text anchored to bottom */}
-          <div style={{ width: '61%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: '64px 56px' }}>
-            <h1 style={{
+          <div className="lp-hero-left" style={{ width: '61%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: '64px 56px' }}>
+            <h1 className="lp-hero-h1" style={{
               fontFamily: "'Montserrat', sans-serif",
               fontWeight: 600,
               fontSize: 47,
@@ -220,7 +223,7 @@ export default function LafueLPV2({
           </div>
 
           {/* Right col — form card */}
-          <div style={{ width: '39%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '48px 40px 48px 20px' }}>
+          <div className="lp-hero-right" style={{ width: '39%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '48px 40px 48px 20px' }}>
             <div style={{
               background: WHITE,
               borderRadius: 8,
@@ -266,9 +269,9 @@ export default function LafueLPV2({
       </section>
 
       {/* ── STEPS ────────────────────────────────────────────────────────── */}
-      <section style={{ background: WHITE, padding: '80px 48px 0', textAlign: 'center' }}>
+      <section className="lp-pad" style={{ background: WHITE, padding: '80px 48px 0', textAlign: 'center' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
-          <h2 style={{
+          <h2 className="lp-h2-xl" style={{
             fontFamily: "'Montserrat', sans-serif",
             fontWeight: 800,
             fontSize: 40,
@@ -283,9 +286,9 @@ export default function LafueLPV2({
           </p>
 
           {/* Horizontal step items, no gap, dividers via border */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 0 }}>
+          <div className="lp-steps-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 0 }}>
             {/* Step 1: calendar + check */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: 20, padding: '0 32px', textAlign: 'left' }}>
+            <div className="lp-step" style={{ display: 'flex', alignItems: 'center', gap: 20, padding: '0 32px', textAlign: 'left' }}>
               <svg xmlns="http://www.w3.org/2000/svg" width="106" height="119" viewBox="0 0 106 119" fill="none" style={{ flexShrink: 0 }}>
                 <g clipPath="url(#clip0_6004_39)">
                   <path d="M90.9953 75.52C94.906 76.8872 98.3159 79.3037 100.899 82.4312C104.086 86.2969 106 91.2427 106 96.6294C106 102.016 104.161 106.784 101.081 110.612C96.9643 115.726 90.6454 119 83.5479 119C77.2119 119 71.4865 116.385 67.4078 112.178C65.4799 110.195 63.9156 107.854 62.8316 105.267C61.7167 102.607 61.0992 99.6919 61.0992 96.6294C61.0992 85.1348 69.8056 75.6567 81.0128 74.4023C81.843 74.3101 82.6903 74.2588 83.5513 74.2588C86.1653 74.2588 88.6661 74.6997 90.9988 75.52H90.9953Z" fill="#2E2E2F"/>
@@ -315,7 +318,7 @@ export default function LafueLPV2({
             </div>
 
             {/* Step 2: person + check */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: 20, padding: '0 32px', textAlign: 'left', borderLeft: '1px solid #e8ecf0' }}>
+            <div className="lp-step lp-step-divider" style={{ display: 'flex', alignItems: 'center', gap: 20, padding: '0 32px', textAlign: 'left', borderLeft: '1px solid #e8ecf0' }}>
               <svg xmlns="http://www.w3.org/2000/svg" width="124" height="125" viewBox="0 0 124 125" fill="none" style={{ flexShrink: 0 }}>
                 <path d="M101.963 80.3571C102.982 80.3571 103.981 80.4419 104.967 80.5655C99.5599 74.5818 94.1157 74.122 92.4764 73.741C87.4207 72.5654 81.2926 73.0654 78.0276 72.0565C77.6436 75.2366 68.321 85.6964 62.2124 92.2559L59.5623 82.125C61.554 80.9643 61.9874 78.3928 61.9874 76.2544H51.9464C51.9464 78.375 52.3753 80.9181 54.3265 82.0967L51.7214 92.2544C45.6098 85.6934 36.2902 75.2336 35.9062 72.0565C32.6397 73.0699 26.5161 72.5699 21.4574 73.744C18.8867 74.3348 6.95148 75.0922 0.491927 97.1503C-0.383944 100.147 -0.0764894 103.394 1.3483 106.067C6.64552 115.994 34.4739 119.049 56.9706 119.048C65.1294 119.048 73.9841 118.641 82.2149 117.658C79.5423 113.821 77.9661 109.174 77.9661 104.167C77.9661 91.0387 88.733 80.3571 101.964 80.3571H101.963Z" fill="#2E2E2F"/>
                 <path d="M30.387 48.5848C32.7657 54.939 36.5331 61.1086 41.1945 65.6265C43.8311 68.183 46.7526 70.2068 49.8692 71.433C52.0124 72.2753 54.2455 72.7411 56.5417 72.7411C58.8379 72.7411 61.0725 72.2753 63.2142 71.433C66.4373 70.1637 69.4593 68.0431 72.1649 65.3571C76.7108 60.8542 80.3837 54.7798 82.7189 48.5327C84.5141 48.0089 86.3933 44.6726 87.1612 40.4107C87.9921 35.7887 87.2062 31.7559 85.4095 31.0818C85.4725 29.9539 85.5145 28.8125 85.5115 27.6428C85.468 10.8824 75.5649 1.13987 59.9492 0.101184C46.3342 -0.805066 36.0772 4.56249 31.4054 13.4836C29.8321 16.4851 28.9353 20.2396 28.5903 24.3199C28.0684 26.4449 27.7579 28.6518 27.7579 30.9345H27.8089C27.8089 30.9524 27.8044 30.9687 27.8044 30.9881C27.7699 30.9925 27.7384 30.994 27.7039 31C25.7137 31.3437 24.8064 35.5595 25.6807 40.4152C26.4801 44.8765 28.5093 48.3274 30.384 48.5878L30.387 48.5848Z" fill="#2E2E2F"/>
@@ -326,7 +329,7 @@ export default function LafueLPV2({
             </div>
 
             {/* Step 3: person + star */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: 20, padding: '0 32px', textAlign: 'left', borderLeft: '1px solid #e8ecf0' }}>
+            <div className="lp-step lp-step-divider" style={{ display: 'flex', alignItems: 'center', gap: 20, padding: '0 32px', textAlign: 'left', borderLeft: '1px solid #e8ecf0' }}>
               <svg xmlns="http://www.w3.org/2000/svg" width="133" height="139" viewBox="0 0 133 139" fill="none" style={{ flexShrink: 0 }}>
                 <g clipPath="url(#clip0_6004_63)">
                   <path fillRule="evenodd" clipRule="evenodd" d="M110.071 93.3247C122.735 93.3247 133 103.552 133 116.162C133 128.773 122.735 139 110.071 139C97.4076 139 87.1426 128.776 87.1426 116.162C87.1426 103.549 97.4076 93.3247 110.071 93.3247ZM37.262 80.4141C7.4524 93.7734 2.73658 92.29 1.49217 108.369C0.247756 124.452 0 131.874 0 131.874H90.2987C86.8442 127.564 84.7776 122.107 84.7776 116.162C84.7776 104.284 93.0324 94.3258 104.139 91.6674C98.866 88.9249 90.828 85.9412 78.4937 80.4113L77.5899 80.3131L67.3221 116.039L61.4858 103.047V91.4319H62.474C63.9014 91.4319 65.0698 90.2709 65.0698 88.8464V84.8279C65.0698 83.4062 63.9014 82.2424 62.474 82.2424H53.3689C51.9415 82.2424 50.7731 83.4034 50.7731 84.8279V88.8464C50.7731 90.2681 51.9387 91.4319 53.3689 91.4319H54.2699V103.047L48.4307 116.039L38.1629 80.3131L37.2591 80.4113L37.262 80.4141ZM36.8791 6.12724C35.0913 4.09137 33.3288 2.0555 31.5608 0H59.0504C68.7298 0 71.1116 2.4509 76.2751 9.76713L76.368 9.90734H76.3736H76.3793H76.6524H76.6693L76.9452 9.91295H76.9593C88.8741 10.3841 87.0075 28.6873 86.0756 36.4409C87.7986 36.8391 88.539 38.1151 88.3842 39.8341C88.0745 43.2468 87.5931 46.2137 86.9089 48.8861C84.7439 57.3661 80.2955 63.1372 74.4507 69.5365C64.5855 81.8358 48.8108 82.7191 38.6105 67.9745C34.9364 62.6661 27.881 52.5092 27.881 45.6528C27.881 43.3422 28.2217 40.5856 29.3422 38.4852C27.6164 33.0731 26.8928 26.6906 27.6361 21.0513C28.6496 13.4042 31.2116 10.9169 36.8791 6.12444V6.12724Z" fill="#2E2E2F"/>
@@ -346,8 +349,8 @@ export default function LafueLPV2({
       </section>
 
       {/* ── NO-SALES BLOCK ───────────────────────────────────────────────── */}
-      <div style={{ padding: '64px 48px 80px', textAlign: 'center' }}>
-        <h2 style={{
+      <div className="lp-nosales" style={{ padding: '64px 48px 80px', textAlign: 'center' }}>
+        <h2 className="lp-h2-xl" style={{
           fontFamily: "'Montserrat', sans-serif",
           fontWeight: 800,
           fontSize: 46,
@@ -380,8 +383,8 @@ export default function LafueLPV2({
       </div>
 
       {/* ── FEATURES ─────────────────────────────────────────────────────── */}
-      <section style={{ background: DARK, padding: '80px 48px' }}>
-        <h2 style={{
+      <section className="lp-pad" style={{ background: DARK, padding: '80px 48px' }}>
+        <h2 className="lp-h2-lg" style={{
           fontFamily: "'Montserrat', sans-serif",
           fontWeight: 800,
           fontSize: 38,
@@ -434,7 +437,7 @@ export default function LafueLPV2({
           ))}
         </div>
 
-        <div style={{ display: 'flex', gap: 16, justifyContent: 'center', marginTop: 48 }}>
+        <div className="lp-btn-row" style={{ display: 'flex', gap: 16, justifyContent: 'center', marginTop: 48 }}>
           <a href="#" style={{
             background: WHITE,
             color: '#1a1a1a',
@@ -467,13 +470,13 @@ export default function LafueLPV2({
       </section>
 
       {/* ── DOCTOR BIO ───────────────────────────────────────────────────── */}
-      <section style={{ background: WHITE, padding: '80px 48px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.15fr', gap: 64, alignItems: 'flex-start', maxWidth: 1100, margin: '0 auto' }}>
+      <section className="lp-pad" style={{ background: WHITE, padding: '80px 48px' }}>
+        <div className="lp-bio-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1.15fr', gap: 64, alignItems: 'flex-start', maxWidth: 1100, margin: '0 auto' }}>
           <div style={{ background: '#2E2E2F', paddingTop: 80, display: 'flex', alignItems: 'flex-end' }}>
             <img src={DR_PHOTO} alt="Dr. Anton" style={{ width: '100%', height: 'auto', display: 'block' }} />
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 18, paddingTop: 8 }}>
-            <h2 style={{
+            <h2 className="lp-h2-lg" style={{
               fontFamily: "'Montserrat', sans-serif",
               fontWeight: 800,
               fontSize: 38,
@@ -520,8 +523,8 @@ export default function LafueLPV2({
       </section>
 
       {/* ── REVIEWS ──────────────────────────────────────────────────────── */}
-      <section style={{ background: WHITE, padding: '80px 48px', textAlign: 'center' }}>
-        <h2 style={{
+      <section className="lp-pad" style={{ background: WHITE, padding: '80px 48px', textAlign: 'center' }}>
+        <h2 className="lp-h2-xl" style={{
           fontFamily: "'Montserrat', sans-serif",
           fontWeight: 800,
           fontSize: 40,
@@ -584,7 +587,7 @@ export default function LafueLPV2({
       {/* ── FINANCING ────────────────────────────────────────────────────── */}
       <section className="financing-grid">
         {/* Left panel */}
-        <div style={{ background: STEEL_PANEL, padding: '60px 56px', display: 'flex', flexDirection: 'column', gap: 16, justifyContent: 'center' }}>
+        <div className="lp-fin-left" style={{ background: STEEL_PANEL, padding: '60px 56px', display: 'flex', flexDirection: 'column', gap: 16, justifyContent: 'center' }}>
           <div style={{
             display: 'inline-flex',
             alignItems: 'center',
@@ -604,13 +607,13 @@ export default function LafueLPV2({
             </div>
             Patient-First Approach
           </div>
-          <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: 40, letterSpacing: '-0.02em', color: '#1a1a1a', lineHeight: 1.15 }}>
+          <h2 className="lp-h2-xl" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: 40, letterSpacing: '-0.02em', color: '#1a1a1a', lineHeight: 1.15 }}>
             Accessible Hair Loss Care
           </h2>
           <p style={{ fontSize: 16, color: '#445', marginBottom: 0 }}>Options designed with patients in mind</p>
           <p style={{ fontSize: 13, color: '#445', fontWeight: 500 }}>As low as</p>
           <div style={{ display: 'flex', alignItems: 'flex-end', gap: 6 }}>
-            <span style={{ fontFamily: "'Lato', sans-serif", fontWeight: 900, fontSize: 72, color: '#1a1a1a', lineHeight: 1, letterSpacing: '-0.04em' }}>$188</span>
+            <span className="lp-price" style={{ fontFamily: "'Lato', sans-serif", fontWeight: 900, fontSize: 72, color: '#1a1a1a', lineHeight: 1, letterSpacing: '-0.04em' }}>$188</span>
             <span style={{ fontFamily: "'Lato', sans-serif", fontWeight: 700, fontSize: 28, color: '#1a1a1a', paddingBottom: 10 }}>/mo</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 4 }}>
@@ -637,8 +640,8 @@ export default function LafueLPV2({
       </section>
 
       {/* ── COMMITMENT ───────────────────────────────────────────────────── */}
-      <section style={{ background: WHITE, padding: '80px 48px', textAlign: 'center' }}>
-        <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: 40, color: '#1a1a1a', letterSpacing: '-0.02em', marginBottom: 10 }}>
+      <section className="lp-pad" style={{ background: WHITE, padding: '80px 48px', textAlign: 'center' }}>
+        <h2 className="lp-h2-xl" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: 40, color: '#1a1a1a', letterSpacing: '-0.02em', marginBottom: 10 }}>
           Our Commitment to Patients
         </h2>
         <p style={{ fontSize: 17, color: '#777', marginBottom: 56 }}>Real capabilities. Real safety. Real patient-first care.</p>
@@ -731,9 +734,9 @@ export default function LafueLPV2({
       <FaqSection />
 
       {/* ── FOOTER FORM ──────────────────────────────────────────────────── */}
-      <section style={{ background: '#2b2b2c', display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: 560 }}>
+      <section className="lp-map-form" style={{ background: '#2b2b2c', display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: 560 }}>
         {/* Map left */}
-        <div style={{ position: 'relative', overflow: 'hidden' }}>
+        <div className="lp-map-col" style={{ position: 'relative', overflow: 'hidden' }}>
           <img
             src="/footer-map.png"
             alt=""
@@ -788,13 +791,13 @@ export default function LafueLPV2({
         </div>
 
         {/* GHL form right */}
-        <div style={{ padding: '40px 44px', display: 'flex', flexDirection: 'column' }}>
+        <div className="lp-form-col" style={{ padding: '40px 44px', display: 'flex', flexDirection: 'column' }}>
           <GhlForm formId={bottomFormId} height={400} formName="Footer Form - Hair Loss" />
         </div>
       </section>
 
       {/* ── FOOTER BAR ───────────────────────────────────────────────────── */}
-      <footer style={{ background: '#222222', padding: '18px 48px', textAlign: 'center', fontSize: 12, color: '#666', letterSpacing: '0.05em' }}>
+      <footer className="lp-pad" style={{ background: '#222222', padding: '18px 48px', textAlign: 'center', fontSize: 12, color: '#666', letterSpacing: '0.05em' }}>
         &copy; 2026 L.A.FUE Hair &bull;{' '}
         <a href="/privacy-policy" style={{ color: '#666', textDecoration: 'underline' }}>PRIVACY POLICY</a>
         {' '}&bull;{' '}
