@@ -175,7 +175,7 @@ export default function LafueLPV2({
               }}>
                 Start With Educational Information
               </p>
-              <GhlForm formId={heroFormId} height={480} formName="LAFUE Hero Form" />
+              <GhlForm formId={heroFormId} height={400} formName="Banner Form - Hair Loss" />
               <div style={{
                 marginTop: 16,
                 display: 'flex',
@@ -763,7 +763,7 @@ export default function LafueLPV2({
 
         {/* GHL form right */}
         <div style={{ padding: '40px 44px', display: 'flex', flexDirection: 'column' }}>
-          <GhlForm formId={bottomFormId} height={460} formName="LAFUE Footer Form" />
+          <GhlForm formId={bottomFormId} height={400} formName="Footer Form - Hair Loss" />
         </div>
       </section>
 
