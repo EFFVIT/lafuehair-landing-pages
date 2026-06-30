@@ -490,21 +490,6 @@ export default function LafueLPV2({
               <div style={{ background: DARK_CARD, padding: '32px 28px 24px', flex: 1, display: 'flex', flexDirection: 'column', gap: 16 }}>
                 <div style={{ fontSize: 42, lineHeight: 1, color: 'rgba(255,255,255,0.55)', fontFamily: 'Georgia, serif', marginTop: -8 }}>&#8220;</div>
                 <p style={{ fontSize: 14, lineHeight: 1.75, color: 'rgba(255,255,255,0.82)', flex: 1 }}>{review.text}</p>
-                <a href="#" style={{
-                  display: 'inline-block',
-                  border: '1.5px solid rgba(255,255,255,0.4)',
-                  color: WHITE,
-                  fontSize: 12,
-                  fontWeight: 700,
-                  letterSpacing: '0.07em',
-                  textTransform: 'uppercase' as const,
-                  padding: '9px 20px',
-                  borderRadius: 50,
-                  textDecoration: 'none',
-                  alignSelf: 'flex-start',
-                }}>
-                  Read More
-                </a>
               </div>
               <div style={{ background: MIST, padding: '18px 28px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
                 <span style={{ fontSize: 15, fontWeight: 700, color: '#1a1a1a' }}>{review.name}</span>
