@@ -404,8 +404,8 @@ export default function LafueLPV2({
       {/* ── DOCTOR BIO ───────────────────────────────────────────────────── */}
       <section style={{ background: WHITE, padding: '80px 48px' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.15fr', gap: 64, alignItems: 'flex-start', maxWidth: 1100, margin: '0 auto' }}>
-          <div style={{ overflow: 'hidden', borderRadius: 8 }}>
-            <img src={DR_PHOTO} alt="Dr. Anton" style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }} />
+          <div style={{ background: '#2E2E2F', paddingTop: 80, display: 'flex', alignItems: 'flex-end' }}>
+            <img src={DR_PHOTO} alt="Dr. Anton" style={{ width: '100%', height: 'auto', display: 'block' }} />
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 18, paddingTop: 8 }}>
             <h2 style={{
