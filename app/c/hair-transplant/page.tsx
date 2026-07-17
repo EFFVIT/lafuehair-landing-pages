@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import LafueLPV2 from '@/components/LafueLPV2'
 
 export const metadata: Metadata = {
+  openGraph: { images: [{ url: "https://hair.lafuehairnyc.com/og/c-hair-transplant.webp", width: 1200, height: 630, alt: "Hair transplant consultation at L.A. FUE Hair NYC" }] },
+  twitter: { card: "summary_large_image", images: ["https://hair.lafuehairnyc.com/og/c-hair-transplant.webp"] },
   title: 'Hair Loss Educational Information | L.A. FUE Hair NYC',
   robots: 'noindex, nofollow',
 }
