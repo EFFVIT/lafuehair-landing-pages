@@ -78,7 +78,7 @@ export default function LafueMetaLP() {
           {/* Right: form card + before/after results */}
           <div>
             <div id="hero-form" style={{ background: CARD_BG, border: `1px solid ${CARD_BORDER}`, borderRadius: 16, padding: 24, marginBottom: 24 }}>
-              <p style={{ fontSize: 14, fontWeight: 700, color: HEADING, margin: '0 0 4px' }}>Book Your Consultation</p>
+              <p style={{ fontSize: 14, fontWeight: 700, color: HEADING, margin: '0 0 4px' }}>Book A Consult</p>
               <p style={{ fontSize: 13, color: BODY, margin: '0 0 14px' }}>Every treatment plan is customized&mdash;no templates, no shortcuts.</p>
               <GhlForm formId={HERO_FORM_ID} height={440} formName="LAFUE Meta Hero" />
             </div>
@@ -179,12 +179,9 @@ export default function LafueMetaLP() {
       <section style={{ background: WHITE, padding: '64px 24px' }}>
         <div className="two-col" style={{ maxWidth: 1080, margin: '0 auto', gap: 48, alignItems: 'center' }}>
           <div>
-            <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 'clamp(26px, 3.2vw, 38px)', fontWeight: 800, color: HEADING, margin: '0 0 16px', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+            <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 'clamp(26px, 3.2vw, 38px)', fontWeight: 800, color: HEADING, margin: '0 0 24px', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
               If You&rsquo;re Going To Do This, Do It Informed
             </h2>
-            <p style={{ fontSize: 16, color: BODY, margin: '0 0 24px', lineHeight: 1.7 }}>
-              Request your private evaluation with the L.A. FUE Hair medical team. No obligation, no pressure &mdash; just a clear, honest picture of your options.
-            </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               <a href={PHONE_HREF} style={{ color: HEADING, fontWeight: 600, fontSize: 15, textDecoration: 'none' }}>{PHONE}</a>
               <a href={`mailto:${EMAIL}`} style={{ color: HEADING, fontWeight: 600, fontSize: 15, textDecoration: 'none' }}>{EMAIL}</a>
@@ -205,6 +202,7 @@ export default function LafueMetaLP() {
           <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap', marginBottom: 20 }}>
             <a href="/privacy-policy" style={{ color: 'rgba(255,255,255,0.72)', fontSize: 13, textDecoration: 'none' }}>Privacy Policy</a>
             <a href="/cookie-policy" style={{ color: 'rgba(255,255,255,0.72)', fontSize: 13, textDecoration: 'none' }}>Cookie Policy</a>
+            <a href="/terms-of-service" style={{ color: 'rgba(255,255,255,0.72)', fontSize: 13, textDecoration: 'none' }}>Terms of Service</a>
           </div>
           <p style={{ fontSize: 12, lineHeight: 1.7, margin: '0 0 16px' }}>
             <strong style={{ color: '#fff' }}>Medical Disclaimer:</strong> This website provides general information about hair restoration procedures. It is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Individual results may vary. Not all candidates are eligible for treatment. A medical consultation is required to determine candidacy.

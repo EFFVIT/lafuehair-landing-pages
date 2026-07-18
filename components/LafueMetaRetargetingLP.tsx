@@ -340,6 +340,7 @@ export default function LafueMetaRetargetingLP() {
           <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap', marginBottom: 20 }}>
             <a href="/privacy-policy" style={{ color: 'rgba(255,255,255,0.72)', fontSize: 13, textDecoration: 'none' }}>Privacy Policy</a>
             <a href="/cookie-policy" style={{ color: 'rgba(255,255,255,0.72)', fontSize: 13, textDecoration: 'none' }}>Cookie Policy</a>
+            <a href="/terms-of-service" style={{ color: 'rgba(255,255,255,0.72)', fontSize: 13, textDecoration: 'none' }}>Terms of Service</a>
           </div>
           <p style={{ fontSize: 12, lineHeight: 1.7, margin: '0 0 16px' }}>
             <strong style={{ color: '#fff' }}>Medical Disclaimer:</strong> This website provides general information about hair restoration procedures. It is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Individual results may vary. Not all candidates are eligible for treatment. A medical consultation is required to determine candidacy.
