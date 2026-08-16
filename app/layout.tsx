@@ -1,4 +1,5 @@
 import Script from 'next/script'
+import DniSwap from '@/components/DniSwap'
 import GaTag from '@/components/GaTag'
 import Fab from '@/components/fab/Fab'
 import './globals.css'
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body>
           <GaTag />
         <Fab client="lafue" />
+        <DniSwap />
         <Script
           src="https://widgets.leadconnectorhq.com/loader.js"
           data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
