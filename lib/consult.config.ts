@@ -14,7 +14,7 @@
    schema.org wins.
 
    NOTE FOR THIS CLIENT:
-   CALENDAR MISMATCH: this sub-account has only FOUR calendars and no 60min consult pair. Using 'Consultation Request' (30min) for in-person and 'Virtual Consultation' (30min) for virtual. NOTE it also carries TWO calendars both named 'Virtual Consultation' (DtNWDd66ywzw7CPf1b54 and Wvqqu0SnrN8yjNKVIo0k) — the duplicate should be resolved by the practice. NO TERMS PAGE: consent omits the Terms clause.
+   The canonical 60min consult pair did NOT exist on this sub-account and was CREATED on 2026-08-17 at Joe's direction, mirroring this practice's OWN published days and hours (Mon-Fri 08:00-17:00) from their existing 30min calendars — only the name and the duration changed. Both verified returning live 60min slots. The originals were left untouched. NOTE this sub-account also carries TWO calendars both named 'Virtual Consultation' (DtNWDd66ywzw7CPf1b54 and Wvqqu0SnrN8yjNKVIo0k); that pre-existing duplicate is for the practice to resolve and is not used by this page. NO TERMS PAGE: consent omits the Terms clause rather than linking to a 404.
    ========================================================================== */
 
 export const CONSULT = {
@@ -30,15 +30,15 @@ export const CONSULT = {
      confirming both return free slots. These already existed; nothing was
      created in the client's account. */
   calendars: {
-    'in-person': 'gIHLwWN3YD557MwKkj58',
-    virtual: 'DtNWDd66ywzw7CPf1b54',
+    'in-person': 'Jpv6uz64LxXHJu4PhDsR',
+    virtual: 'x2GbShBnc6JYkiGBwA5S',
   },
 
   /* Read from the calendar's own slotDuration — never asserted. Saying "one
      hour" over a calendar that books 30 minutes is a promise the system of
      record does not keep. */
-  durationMinutes: 30,
-  durationLabel: '30 minutes',
+  durationMinutes: 60,
+  durationLabel: '60 minutes',
 
   address: '400 Garden City Plaza, Suite 107',
   city: 'Garden City, NY 11530',
@@ -66,8 +66,8 @@ export const CONSULT = {
   postsApi: 'https://lafuehairnyc.com/wp-json/wp/v2/posts?per_page=3&_fields=id,link,date,title',
 
   headline: 'Book your consultation.',
-  subhead: '30 minutes with L.A. FUE Hair New York, in person in Garden City or by video. Choose a time below and it is confirmed on the practice calendar straight away.',
-  metaDescription: 'Book a 30 minutes consultation with L.A. FUE Hair New York. In person in Garden City or by video.',
+  subhead: '60 minutes with L.A. FUE Hair New York, in person in Garden City or by video. Choose a time below and it is confirmed on the practice calendar straight away.',
+  metaDescription: 'Book a 60 minutes consultation with L.A. FUE Hair New York. In person in Garden City or by video.',
 
   /* EMPTY BY DESIGN, awaiting the practice's own photographs.
      No before/after and no identifiable patient — before/after imagery is a
