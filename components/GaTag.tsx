@@ -34,8 +34,11 @@ const GA_ID = 'G-89E24B152T'
    pages fleet-wide on 2026-08-15. Do not widen this gate without that call.
 
    Suppressing a tag on a medical page can only ever reduce exposure, so this
-   edit cannot hide a violation. */
-const HEALTH_INTENT_ROUTES = ['/c/consult']
+   edit cannot hide a violation.
+
+   Extended 2026-08-20 at Mike's direction to cover /c/hair-restoration,
+   /c/hair-transplant, and /c/evaluation — the same finding called out above. */
+const HEALTH_INTENT_ROUTES = ['/c/consult', '/c/hair-restoration', '/c/hair-transplant', '/c/evaluation']
 const isHealthIntent = (p: string) =>
   HEALTH_INTENT_ROUTES.some((r) => p === r || p.startsWith(r + '/'))
 
