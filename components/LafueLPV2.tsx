@@ -771,7 +771,14 @@ export default function LafueLPV2({
                 <svg viewBox="0 0 18 18" fill="none" style={{ width: 18, height: 18, flexShrink: 0 }}>
                   <path d="M9 1C5.7 1 3 3.7 3 7c0 5.3 6 10 6 10s6-4.7 6-10c0-3.3-2.7-6-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z" fill="rgba(255,255,255,.7)"/>
                 </svg>
-                <span>400 Garden City Plaza, Suite 107, Garden City, NY 11530</span>
+                <span><strong style={{ fontWeight: 600 }}>Long Island:</strong> 400 Garden City Plaza, Suite 107, Garden City, NY 11530</span>
+              </div>
+              {/* Address only: Manhattan has no paid CTN, so the one tracked line below serves both clinics. */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 14, color: 'rgba(255,255,255,0.8)' }}>
+                <svg viewBox="0 0 18 18" fill="none" style={{ width: 18, height: 18, flexShrink: 0 }}>
+                  <path d="M9 1C5.7 1 3 3.7 3 7c0 5.3 6 10 6 10s6-4.7 6-10c0-3.3-2.7-6-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z" fill="rgba(255,255,255,.7)"/>
+                </svg>
+                <span><strong style={{ fontWeight: 600 }}>Manhattan:</strong> 65 W 36th St, 10th Floor, New York, NY 10018</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 14, color: 'rgba(255,255,255,0.8)' }}>
                 <svg viewBox="0 0 18 18" fill="none" style={{ width: 18, height: 18, flexShrink: 0 }}>

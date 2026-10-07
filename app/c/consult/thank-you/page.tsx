@@ -131,6 +131,10 @@ export default async function ThankYou() {
       <footer className="consult-footer">
         <p className="cf-name">{CONSULT.practice}</p>
         <p className="cf-line">{CONSULT.address}, {CONSULT.city} &nbsp;·&nbsp; <a href={`tel:${CONSULT.phoneRaw}`}>{CONSULT.phoneDisplay}</a></p>
+        {/* Optional per client; absent on single-office configs. */}
+        {(CONSULT as { otherOffices?: readonly { address: string; city: string }[] }).otherOffices?.map((o) => (
+          <p className="cf-line" key={o.address}>{o.address}, {o.city}</p>
+        ))}
         <p className="cf-disc">
           Individual results vary. This content is for educational purposes only and is not medical
           advice. Consult a qualified physician before pursuing any medical procedure.

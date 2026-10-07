@@ -44,6 +44,12 @@ export const CONSULT = {
   city: 'Garden City, NY 11530',
   officeShort: 'Garden City',
   inPersonWhere: 'At the Garden City office, 400 Garden City Plaza, Suite 107.',
+  /* Footer only. The in-person calendar books Garden City, so the booking
+     section above stays single-office. Address only: Manhattan has no paid
+     CTN, so phoneDisplay serves both. Same address as the 2026-09-01 schema. */
+  otherOffices: [
+    { address: '65 W 36th St, 10th Floor', city: 'New York, NY 10018' },
+  ],
   openDays: 'Times shown are the practice’s published availability',
   hoursLine: 'Only times the practice has actually published are shown.',
 
