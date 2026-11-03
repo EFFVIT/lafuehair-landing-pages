@@ -83,7 +83,7 @@ export const CONSULT = {
      Add as: ['file-basename', 'alt text'] with the file at public/consult/. */
   photos: [] as [string, string][],
 
-  wordmarkSrc: '/logo-lafue.png',
+  wordmarkSrc: '/logo-lafue-dark.png',
   wordmarkText: null as string | null,
 
   /* NO browser analytics or advertising tag on this page. This is not a
