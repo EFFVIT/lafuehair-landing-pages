@@ -52,9 +52,10 @@ export default async function ThankYou() {
       <GaTag />
 
       <header className="masthead">
-        <a className="mark" href={CONSULT.siteUrl} aria-label={CONSULT.practice}>
+        {/* No link to the main site: /c/ pages must not send paid traffic off the funnel. */}
+        <div className="mark">
           <Wordmark className="wordmark" />
-        </a>
+        </div>
         <div className="mast-meta">
           <a className="tel" href={`tel:${CONSULT.phoneRaw}`}>{CONSULT.phoneDisplay}</a>
         </div>

@@ -39,9 +39,10 @@ export default function ConsultPage() {
       <a className="skip" href="#consult-book">Skip to the booking form</a>
 
       <header className="masthead">
-        <a className="mark" href={CONSULT.siteUrl} aria-label={CONSULT.practice}>
+        {/* No link to the main site: /c/ pages must not send paid traffic off the funnel. */}
+        <div className="mark">
           <Wordmark className="wordmark" />
-        </a>
+        </div>
         <div className="mast-meta">
           {/* DniSwap is mounted in the root layout and rewrites this number and
               its tel: href when a gclid session is present. The number below is
