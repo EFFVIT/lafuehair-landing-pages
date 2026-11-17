@@ -21,32 +21,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 }
 
-/* Posts are read live from the practice's own site rather than curated here, so
-   the list cannot go stale or misattribute a title. Revalidated hourly. A
-   failed read renders nothing at all: an empty list and an unreachable API are
-   different claims, and inventing filler for either is how a wrong fact ships. */
-type Post = { id: number; link: string; date: string; title: { rendered: string } }
-
-async function recentPosts(): Promise<Post[]> {
-  if (!CONSULT.postsApi) return []
-  try {
-    const res = await fetch(CONSULT.postsApi, { next: { revalidate: 3600 } })
-    if (!res.ok) return []
-    const data = await res.json()
-    return Array.isArray(data) ? (data as Post[]) : []
-  } catch {
-    return []
-  }
-}
-
-const decode = (s: string) =>
-  s.replace(/&#(\d+);/g, (_, n) => String.fromCharCode(Number(n)))
-   .replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ')
-   .replace(/&#8217;|&rsquo;/g, '’').replace(/&#8216;|&lsquo;/g, '‘')
-
-export default async function ThankYou() {
-  const posts = await recentPosts()
-
+export default function ThankYou() {
   return (
     <div id="consult">
       <GaTag />
@@ -68,54 +43,16 @@ export default async function ThankYou() {
         </section>
 
         {/* ---------------------------------------------------------------
-            WHAT TO EXPECT — INTENTIONALLY EMPTY.
+            WHAT TO EXPECT and TESTIMONIALS: NOT RENDERED.
 
-            The practice has to write this. Describing a consultation we have
-            not been told the shape of is exactly how an "instrument reading"
-            a practice does not offer ended up on a live page on 2026-08-14.
-            Replace this block with their words, then delete the notice.
+            Both wait on the practice: a description of the consultation in
+            its own words, and real, release-covered patient testimonials.
+            The "awaiting" notices were visible to patients, so the sections
+            are left out until the copy exists (86bcxnkhh).
+
+            No "while you wait" blog feed either: it linked the practice's main
+            site, and /c/ pages must not send paid traffic off the funnel.
             --------------------------------------------------------------- */}
-        <section className="tsec" data-awaiting-copy>
-          <h2>What to expect</h2>
-          <p className="tsec-empty">
-            Awaiting copy from the practice. This section stays empty until
-            {' '}{CONSULT.practice} describes the consultation in their own words.
-          </p>
-        </section>
-
-        {/* ---------------------------------------------------------------
-            TESTIMONIALS — INTENTIONALLY EMPTY.
-
-            Needs real, attributable, release-covered patient words. Not
-            writable here, and Google review text needs a working Places key
-            plus Google's attribution requirements honoured.
-            --------------------------------------------------------------- */}
-        <section className="tsec" data-awaiting-copy>
-          <h2>What patients say</h2>
-          <p className="tsec-empty">
-            Awaiting real testimonials with marketing releases on file.
-          </p>
-        </section>
-
-        {posts.length > 0 && (
-          <section className="tsec">
-            <h2>While you wait</h2>
-            <ul className="posts">
-              {posts.map((p) => (
-                <li key={p.id}>
-                  <a href={p.link}>
-                    <span className="pt">{decode(p.title.rendered)}</span>
-                    <time dateTime={p.date}>
-                      {new Date(p.date).toLocaleDateString('en-US', {
-                        month: 'long', day: 'numeric', year: 'numeric',
-                      })}
-                    </time>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
 
         <div className="callnote">
           <p>Need to change it, or have a question first?</p>

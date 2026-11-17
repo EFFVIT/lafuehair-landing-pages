@@ -67,10 +67,6 @@ export const CONSULT = {
      omits the Terms clause rather than linking to a 404, and the footer omits
      the link. A terms page on this subdomain is wanted before ads point here. */
   termsUrl: null,
-  /* null means the feed could not be read. The confirmation page renders no
-     "while you wait" section at all rather than inventing one. */
-  postsApi: 'https://lafuehairnyc.com/wp-json/wp/v2/posts?per_page=3&_fields=id,link,date,title',
-
   headline: 'Book your consultation.',
   subhead: '60 minutes with L.A. FUE Hair New York, in person in Garden City or by video. Choose a time below and it is confirmed on the practice calendar straight away.',
   metaDescription: 'Book a 60 minutes consultation with L.A. FUE Hair New York. In person in Garden City or by video.',
